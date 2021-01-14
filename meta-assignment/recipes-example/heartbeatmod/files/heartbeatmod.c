@@ -23,7 +23,7 @@ ssize_t heartbeatmod_read(struct file *filp, char __user *buf, size_t count, lof
 	i%=2048;
 	int data = ppg[i++];
 //	READ_DATA_FROM_THE_HW(&data);
-	printk(KERN_INFO "[heartbeatmod]read (count=%d, offset=%d)\n", (int)count, (int)*f_pos );
+//	printk(KERN_INFO "[heartbeatmod]read (count=%d, offset=%d)\n", (int)count, (int)*f_pos );
 	copy_to_user(buf,&data,sizeof(int));
 	return count;
 }
